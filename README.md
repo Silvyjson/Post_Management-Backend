@@ -17,12 +17,14 @@ Table of Contents
 - [Contributing](contributing)
 - [License](license)
 
+url: https://post-management-backend.onrender.com
+
 Installation
 
 1. Clone the Repository
 
    ```bash
-   git clone https://github.com/yourusername/project-name.git
+   git clone https://github.com/Silvyjson/Post_Management-Backend.git
    cd project-name
    ```
 
@@ -37,9 +39,9 @@ Installation
    Create a `.env` file in the root directory and add the following environment variables:
 
    ```env
+   PORT
    MONGO_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret_key
-   CLOUDINARY_URL=your_cloudinary_url
    ```
 
 4. Run Migrations
