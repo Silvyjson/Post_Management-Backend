@@ -8,7 +8,7 @@ export const Documentation = `
 </div>
 
 <div style="margin-bottom: 40px;">
-    <b>ENDPOINT_URL: https://backend-youthrive-post-management.onrender.com</b>
+    <b>ENDPOINT_URL: https://post-management-backend.onrender.com</b>
 </div>
 
 <div style="margin-bottom: 40px;">
