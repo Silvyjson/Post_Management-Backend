@@ -2,11 +2,12 @@
   "name": "post_management-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.ts",
-    "dev": "nodemon index.ts"
+    "start": "node dist/index.js",
+    "build": "babel src --out-dir dist --extensions \".ts,.tsx\"",
+    "dev": "nodemon src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +29,10 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.24.9",
+    "@babel/preset-env": "^7.25.0",
+    "@babel/preset-typescript": "^7.24.7",
     "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.17",
     "@types/helmet": "^4.0.0",

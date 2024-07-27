@@ -1,0 +1,40 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _express = require("express");
+var _authenticate_user = require("../middleware/authenticate_user");
+var _auth_controller = require("../controllers/auth_controllers/auth_controller");
+var _login_controller = require("../controllers/auth_controllers/login_controller");
+var _create_post_controller = require("../controllers/post_controllers/create_post_controller");
+var _edit_post_controller = require("../controllers/post_controllers/edit_post_controller");
+var _delete_post_controller = require("../controllers/post_controllers/delete_post_controller");
+var _getAll_post_controller = require("../controllers/post_controllers/get_post_controllers/getAll_post_controller");
+var _getUserPosts_controller = require("../controllers/post_controllers/get_post_controllers/getUserPosts_controller");
+var _getSingle_post_controller = require("../controllers/post_controllers/get_post_controllers/getSingle_post_controller");
+var _vote_post_controller = require("../controllers/post_controllers/vote_post_controller");
+var _post_comment_controller = require("../controllers/post_controllers/comment_controllers/post_comment_controller");
+var _reply_comment_controller = require("../controllers/post_controllers/comment_controllers/reply_comment_controller");
+var _get_comment_controller = require("../controllers/post_controllers/comment_controllers/get_comment_controller");
+var _getFilteredByCategory_post_controller = require("../controllers/post_controllers/getFiltered_post_controllers/getFilteredByCategory_post_controller");
+var _getFilteredByTime_post_controller = require("../controllers/post_controllers/getFiltered_post_controllers/getFilteredByTime_post_controller");
+var _getFilteredByUpvote_post_controller = require("../controllers/post_controllers/getFiltered_post_controllers/getFilteredByUpvote_post_controller");
+var router = (0, _express.Router)();
+router.post('/register-user', _auth_controller.handleRegisterUser);
+router.post('/login-user', _login_controller.handleLogin);
+router.post('/create-post', _authenticate_user.AuthenticateUser, _create_post_controller.handleCreatePost);
+router.patch('/edit-post/:id', _authenticate_user.AuthenticateUser, _edit_post_controller.handleEditPost);
+router["delete"]('/delete-post', _authenticate_user.AuthenticateUser, _delete_post_controller.handleDeletePost);
+router.get('/get-user-posts/:id', _getUserPosts_controller.handleGetUserPosts);
+router.get('/get-all-posts', _getAll_post_controller.handleGetAllPosts);
+router.get('/get-single-post/:id', _getSingle_post_controller.handleGetSinglePost);
+router.post('/add-votes/:id', _authenticate_user.AuthenticateUser, _vote_post_controller.handleVotePost);
+router.post('/post-comment/:id', _authenticate_user.AuthenticateUser, _post_comment_controller.handlePostComment);
+router.post('/reply-comment/:id', _authenticate_user.AuthenticateUser, _reply_comment_controller.handleReplyComment);
+router.get('/get-comments/:id', _get_comment_controller.handleGetCommentsForPost);
+router.get('get-filteredByCategory', _getFilteredByCategory_post_controller.handleGetPostsByCategory);
+router.get('get-filteredByTime', _getFilteredByTime_post_controller.handleGetPostsByTime);
+router.get('get-filteredByUpvotes', _getFilteredByUpvote_post_controller.handleGetPostsByUpvotes);
+var _default = exports["default"] = router;
