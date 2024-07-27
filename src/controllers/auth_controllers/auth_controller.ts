@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import UserModel from '../../models/user_model';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
 interface RegisterUserRequest extends Request {
   body: {

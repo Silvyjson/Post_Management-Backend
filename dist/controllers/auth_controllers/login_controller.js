@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.handleLogin = void 0;
 var _user_model = _interopRequireDefault(require("../../models/user_model"));
-var _bcrypt = _interopRequireDefault(require("bcrypt"));
+var _bcryptjs = _interopRequireDefault(require("bcryptjs"));
 var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
 var _excluded = ["password"];
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
@@ -38,7 +38,7 @@ var handleLogin = exports.handleLogin = /*#__PURE__*/function () {
           }));
         case 7:
           _context.next = 9;
-          return _bcrypt["default"].compare(password, user.password);
+          return _bcryptjs["default"].compare(password, user.password);
         case 9:
           isMatch = _context.sent;
           if (isMatch) {
