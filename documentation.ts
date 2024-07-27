@@ -26,7 +26,7 @@ URL: /api/register-user
   "username": "John Doe",
   "email": "john.doe@example.com",
   "password": "Password123!",
-  "username": "",
+  "profilePicture": "",
 }
 </code>
 </pre>
