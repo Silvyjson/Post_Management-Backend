@@ -157,7 +157,6 @@ Environment Variables
 
 - MONGO_URI: Your MongoDB connection string.
 - JWT_SECRET: Secret key for JWT authentication.
-- CLOUDINARY_URL: Cloudinary URL for image uploads.
 
 Testing
 
