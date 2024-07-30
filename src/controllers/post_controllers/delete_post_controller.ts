@@ -7,8 +7,10 @@ interface DeletePostRequest extends Request {
 
 const handleDeletePost = async (req: DeletePostRequest, res: Response) => {
   try {
-    const { postId } = req.params;
+    const postId = req.params.id;
     const user = req.user;
+
+    console.log(postId);
 
     const post = await PostModel.findByIdAndDelete(postId);
 

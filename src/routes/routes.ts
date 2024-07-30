@@ -26,7 +26,7 @@ router.post('/create-post', AuthenticateUser, handleCreatePost)
 
 router.patch('/edit-post/:id', AuthenticateUser, handleEditPost)
 
-router.delete('/delete-post', AuthenticateUser, handleDeletePost)
+router.delete('/delete-post/:id', AuthenticateUser, handleDeletePost)
 
 router.get('/get-user-posts/:id', handleGetUserPosts)
 
