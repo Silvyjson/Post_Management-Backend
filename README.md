@@ -39,8 +39,8 @@ Installation
    Create a `.env` file in the root directory and add the following environment variables:
 
    ```env
-   PORT
-   MONGO_URI=your_mongodb_connection_string
+   PORT=your_port_number
+   MONGODB_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret_key
    ```
 
@@ -157,7 +157,6 @@ Environment Variables
 
 - MONGO_URI: Your MongoDB connection string.
 - JWT_SECRET: Secret key for JWT authentication.
-- CLOUDINARY_URL: Cloudinary URL for image uploads.
 
 Testing
 
@@ -182,7 +181,7 @@ Contributing
 2. Clone Your Fork
 
    ```bash
-   git clone https://github.com/yourusername/project-name.git
+   git clone https://github.com/Silvyjson/Post_Management-Backend.git
    ```
 
 3. Create a New Branch
