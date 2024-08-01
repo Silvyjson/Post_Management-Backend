@@ -17,42 +17,43 @@ var handleDeletePost = exports.handleDeletePost = /*#__PURE__*/function () {
       while (1) switch (_context.prev = _context.next) {
         case 0:
           _context.prev = 0;
-          postId = req.params.postId;
+          postId = req.params.id;
           user = req.user;
-          _context.next = 5;
+          console.log(postId);
+          _context.next = 6;
           return _post_model["default"].findByIdAndDelete(postId);
-        case 5:
+        case 6:
           post = _context.sent;
           if (post) {
-            _context.next = 8;
+            _context.next = 9;
             break;
           }
           return _context.abrupt("return", res.status(404).json({
             message: 'Post not found'
           }));
-        case 8:
+        case 9:
           if (!(post.user.toString() !== user._id.toString())) {
-            _context.next = 10;
+            _context.next = 11;
             break;
           }
           return _context.abrupt("return", res.status(403).json({
             message: 'Not authorized to delete this post'
           }));
-        case 10:
+        case 11:
           return _context.abrupt("return", res.status(200).json({
             message: 'Post deleted successfully'
           }));
-        case 13:
-          _context.prev = 13;
+        case 14:
+          _context.prev = 14;
           _context.t0 = _context["catch"](0);
           return _context.abrupt("return", res.status(500).json({
             error_message: _context.t0.message
           }));
-        case 16:
+        case 17:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[0, 13]]);
+    }, _callee, null, [[0, 14]]);
   }));
   return function handleDeletePost(_x, _x2) {
     return _ref.apply(this, arguments);

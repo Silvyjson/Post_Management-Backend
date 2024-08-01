@@ -1,0 +1,14 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Project Documentation",
+        "version": "1.0.0",
+        "description": "This project is a comprehensive platform for managing posts, comments, and user interactions. Built with Node.js, Express, and MongoDB, it includes functionalities for creating posts, adding comments, replying to comments, and filtering posts by categories, time, and upvotes. It supports user authentication and allows for dynamic interaction with posts through upvotes and downvotes."
+    },
+    "host": "https://post-management-backend.onrender.com",
+    "basePath": "/api",
+    "schemes": [
+        "https"
+    ],
+    "paths": {}
+}

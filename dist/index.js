@@ -8,9 +8,11 @@ var _morgan = _interopRequireDefault(require("morgan"));
 var _dotenv = _interopRequireDefault(require("dotenv"));
 var _routes = _interopRequireDefault(require("./routes/routes"));
 var _documentation = require("./documentation");
+var _swaggerConfig = require("../swaggerConfig");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 _dotenv["default"].config();
 var app = (0, _express["default"])();
+(0, _swaggerConfig.swaggerConfig)(app);
 app.use(_express["default"].json({
   limit: "50mb"
 }));

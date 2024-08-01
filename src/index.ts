@@ -9,8 +9,12 @@ dotenv.config();
 
 import Routes from "./routes/routes";
 import { Documentation } from "./documentation";
+import { swaggerConfig } from "../swaggerConfig";
+
 
 const app = express();
+
+swaggerConfig(app);
 
 app.use(express.json({ limit: "50mb" }));
 app.use(cors({ origin: "*" }));
