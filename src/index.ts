@@ -9,7 +9,7 @@ dotenv.config();
 
 import Routes from "./routes/routes";
 import { Documentation } from "./documentation";
-import { swaggerConfig } from "../swaggerConfig";
+import { swaggerConfig } from "./swaggerConfig";
 
 
 const app = express();

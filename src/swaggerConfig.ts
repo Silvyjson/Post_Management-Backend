@@ -13,7 +13,7 @@ const options = {
     host: "localhost:8008",
     basePath: "/api",
   },
-  apis: ["./src/routes/routes*.ts"], // Path to the API docs
+  apis: ["./src/routes/routes*.ts"],
 };
 
 const specs = swaggerJsdoc(options);
